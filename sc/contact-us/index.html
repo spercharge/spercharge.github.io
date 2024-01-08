@@ -80,6 +80,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   gtag('config', 'G-0T27FPN9TM');
 </script>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
   var isNS = (navigator.appName == "PN") ? 1 : 0;
   if(navigator.appName == "PN") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
@@ -372,7 +374,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <h2>Get in Touch</h2>
         <div class="title-line lft"></div>
         <div class="contact-form">
-          <form method="" action="">
+          <form  id="submit-form" method="" action="">
             <input type="hidden" name="form-type" value="contact"/>
             <input type="text" name="name" placeholder="Name" required=""/>
             <input type="text" name="phone" placeholder="Phone" required=""/>
@@ -384,6 +386,27 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           </form>
         </div>
       </div>
+
+      <script>
+        $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbziu1VIWqTIh9ud-foQVofzbFPuwjJQMcXgsx5oG8y2yRGMcjBin2NdA9JnoKK8ogjtBw/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+        alert("Our Sales team will be in contact with you shortly. Thank you!")
+        window.location.reload()
+        //window.location.href="https://google.com"
+        },
+        error:function (err){
+        alert("Something Error")
+        
+        }
+        })
+        })
+        </script>
+
       <div class="col-lg-6 col-md-12 col-sm-12"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.369076965041!2d54.514552099999996!3d24.368461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e41006f24aadb%3A0x75bed52e4a00f9e6!2sSuper%20Charge%20Hydraulic%20Machinery%20LLC!5e0!3m2!1sen!2sae!4v1704456667321!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
     </div>
   </div>
@@ -396,7 +419,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
       <div class="col-lg-5 col-md-6 col-sm-12">
         <div class="req-quote-form">
           <h4>Request a Quote</h4>
-          <form method="post" action="https://www.hydrofitme.com/request-quote.php" onsubmit="return submitUserForm();">
+          <form id="submit-form" method="" action="" onsubmit="return submitUserForm();">
             <input type="hidden" name="form-type" value="contact"/>
             <input type="text" name="name" placeholder="Name" required=""/>
             <input type="text" name="phone" placeholder="Phone" required=""/>
@@ -408,6 +431,26 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           </form>
         </div>
       </div>
+
+      <script>
+        $("#submit-form").submit((e)=>{
+        e.preventDefault()
+        $.ajax({
+        url:"https://script.google.com/macros/s/AKfycbziu1VIWqTIh9ud-foQVofzbFPuwjJQMcXgsx5oG8y2yRGMcjBin2NdA9JnoKK8ogjtBw/exec",
+        data:$("#submit-form").serialize(),
+        method:"post",
+        success:function (response){
+        alert("Our Sales team will be in contact with you shortly. Thank you!")
+        window.location.reload()
+        //window.location.href="https://google.com"
+        },
+        error:function (err){
+        alert("Something Error")
+        
+        }
+        })
+        })
+        </script>
       <div class="col-lg-4 col-md-6 col-sm-12">
         <div class="ft-menu">
           <h4>Our Products</h4>
